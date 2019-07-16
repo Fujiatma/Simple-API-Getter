@@ -25,23 +25,33 @@ public class MenuController {
 	@Autowired
 	private UserRepository userRepository;
 	
-	@GetMapping(path="/category-by-userid/{user_id}", produces="application/json")
+	@GetMapping(path="/category-by-userid/{user_id}")
 	public @ResponseBody Map getAllCategoryByUserId(@PathVariable("user_id") String userId) {
 		int groupId = userRepository.findGroupIdByUserId(userId);
 		List<Category> category = categoryRepository.findAllByUserGroup(groupId);
 		HashMap<String, Object> value;
 		List allCategory = new ArrayList();
-		for(Category cat : category) {
+		
+		for (Category cat : category) {
 			value = new HashMap<>();
-			//value.put("moduleOrder", cat.getModuleOrder());
-			value.put("moduleOrder", cat.getModuleOrder());
-			value.put("moduleName", cat.getModuleName());
+			value.put(" moduleOrder",cat.getModuleOrder());
+			value.put(" moduleName",cat.getModuleName());
 			
 			allCategory.add(value);
 		}
 		
 		HashMap<String, List> returnVal = new HashMap<>();
 		returnVal.put("modules", allCategory);
+		
+		System.out.println(allCategory);
 		return returnVal;
 	}
+	
+
+	
+//	@GetMapping(path="/categoryByUser/{user_id}")
+//	public ResponseEntity<Category> findById(@PathVariable String userId){
+//	    return (ResponseEntity<Category>) categoryRepository.findAllByUserId(userId);
+//	}
+	
 }

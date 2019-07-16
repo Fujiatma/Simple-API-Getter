@@ -5,20 +5,14 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
-
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
 @Entity
 public class User {
 	@Id
 	private String userId;
 	private int groupId;
-	//additional information
 	private String name;
     private String email;
     private String username;
