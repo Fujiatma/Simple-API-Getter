@@ -14,7 +14,7 @@ public class TransactionHistory {
 	@Id
     private String thId;
 	private String userId;
-	private String orderID;
+	private int orderId;
     private String status;
     private Date createdAt;
     
@@ -22,11 +22,11 @@ public class TransactionHistory {
     	
     }
     
-	public TransactionHistory(String thId, String userId, String orderID, String status, Date createdAt) {
+	public TransactionHistory(String thId, String userId, int orderId, String status, Date createdAt) {
 		super();
 		this.thId = thId;
 		this.userId = userId;
-		this.orderID = orderID;
+		this.orderId = orderId;
 		this.status = status;
 		this.createdAt = createdAt;
 	}
@@ -47,12 +47,12 @@ public class TransactionHistory {
 		this.userId = userId;
 	}
 
-	public String getOrderID() {
-		return orderID;
+	public int getOrderId() {
+		return orderId;
 	}
 
-	public void setOrderID(String orderID) {
-		this.orderID = orderID;
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
 	}
 
 	public String getStatus() {

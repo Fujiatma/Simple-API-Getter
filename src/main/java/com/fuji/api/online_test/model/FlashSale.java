@@ -14,7 +14,7 @@ public class FlashSale {
 	@Id
 	private String flashSaleId;
 	private String promoId;
-	private String productId;
+	private int productId;
     private String name;
     private String description;
     private int quantity;
@@ -28,7 +28,7 @@ public class FlashSale {
     	
     }
     
-	public FlashSale(String flashSaleId, String promoId, String productId, String name, String description,
+	public FlashSale(String flashSaleId, String promoId, int productId, String name, String description,
 			int quantity, Date startAt, Date endAt, boolean status, Date createdAt, Date updatedAt) {
 		super();
 		this.flashSaleId = flashSaleId;
@@ -68,11 +68,11 @@ public class FlashSale {
 		this.promoId = promoId;
 	}
 
-	public String getProductId() {
+	public int getProductId() {
 		return productId;
 	}
 
-	public void setProductId(String productId) {
+	public void setProductId(int productId) {
 		this.productId = productId;
 	}
 

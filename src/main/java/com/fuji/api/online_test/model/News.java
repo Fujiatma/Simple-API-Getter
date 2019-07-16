@@ -22,6 +22,7 @@ public class News {
     private Date updatedAt;
     private boolean status;
     
+    
     public News() {
     	
     }
