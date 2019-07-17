@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.fuji.api.online_test.model.Category;
+import com.fuji.api.online_test.model.User;
 import com.fuji.api.online_test.repository.CategoryRepository;
 import com.fuji.api.online_test.repository.UserRepository;
 
@@ -52,6 +53,12 @@ public class MenuController {
 //	@GetMapping(path="/categoryByUser/{user_id}")
 //	public ResponseEntity<Category> findById(@PathVariable String userId){
 //	    return (ResponseEntity<Category>) categoryRepository.findAllByUserId(userId);
+//	}
+	
+//	//for Unit Test
+//	@GetMapping("user/")
+//	public List<User> all(){
+//		return userRepository.findAll();
 //	}
 	
 }

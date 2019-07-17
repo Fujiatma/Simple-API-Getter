@@ -14,16 +14,21 @@ public class User {
 	private String userId;
 	private int groupId;
 	private String name;
-    private String email;
-    private String username;
-    private String password;
-    private Date createdAt;
-    private Date updatedAt;
-    
-    public User() {
-    	
-    }
-    
+	private String email;
+	private String username;
+	private String password;
+	private Date createdAt;
+	private Date updatedAt;
+
+	public User() {
+
+	}
+	
+	//for testing
+	public User(int groupId) {
+		this.groupId = groupId;
+	}
+
 	public User(String userId, int groupId, String name, String email, String username, String password, Date createdAt,
 			Date updatedAt) {
 		super();
@@ -100,7 +105,5 @@ public class User {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-    
-    
-}
 
+}

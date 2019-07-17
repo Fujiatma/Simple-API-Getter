@@ -11,4 +11,6 @@ import com.fuji.api.online_test.model.User;
 public interface UserRepository extends JpaRepository<User, String>{
 	@Query("SELECT user.groupId FROM User user where user.userId = :id")
 	public int findGroupIdByUserId(@Param("id") String id);
+	
+	
 }
